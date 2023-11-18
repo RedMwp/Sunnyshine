@@ -1,0 +1,268 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    list-style-type:none;
+    outline: none;
+}
+body{
+    margin:0 auto;
+    color:hsl(212, 27%, 19%);
+    max-width: 1440px;
+}
+.cta-btn{
+    height: 30px;
+    width: 120px;
+    background: #fff;
+    border-radius: 20px;
+    border:none;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+    font-weight: 600;
+    letter-spacing: .5px;
+    font-size:1.1rem;
+    transition: .4s ease-in-out;
+}
+.cta-btn:hover{
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+}
+.secondary-cta-btn{
+    height:33px;
+    margin:20px 0;
+    font-weight: 600;
+    letter-spacing: .5px;
+    font-size:1.1rem;
+    border:none;
+    position:relative;
+    z-index: 1;
+    opacity: .7;
+    transition: .4s ease-in-out;
+}
+.secondary-cta-btn:after{
+    content:'';
+    position:absolute;
+    bottom:5.5px;
+    left:0;
+    padding:3px;
+    background:hsl(7, 99%, 70%);
+    width:100%;
+    border-radius:20px;
+    
+}
+.secondary-cta-btn:hover{
+    opacity: 1;
+}
+header{
+    position:relative;
+}
+nav{
+    height:60px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:0 2%;
+}
+nav ul li{
+    display:inline-block;
+    margin:0 5px;
+    font-size: 1.1rem;
+    font-weight:600;
+    color:#fff;
+    cursor: pointer;
+}
+header nav {
+    width:100%;
+    position: absolute;
+}
+.hero{
+    min-height:100vh;
+    background:url('images/desktop/image-header.jpg') no-repeat;
+    background-position:center;
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+}
+.hero h1{
+    font-size:2.5rem;
+    letter-spacing:2px;
+    color:#fff;
+}
+section{
+    display:flex;
+}
+.tab{
+    width:50%;
+    height:400px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+.tab div{
+    max-width: 350px;
+}
+.tab img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+ p{
+    line-height:1.3;
+    font-size: .99rem;
+    opacity: .8;
+    margin: 20px 0;
+}
+.tab h2{
+    font-size: 2rem;
+}
+.text{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    left:50%;
+    bottom: 15%;
+    text-align: center;
+    transform: translate(-50%,15%)
+}
+.card{
+    width: 350px;
+    height: 300px;
+    text-align: center;
+}
+.card p{
+    font-size: .88rem;
+    max-width:90%;
+    margin: 20px auto;
+    font-weight: 500;
+}
+.testimonials{
+    flex-direction: column;
+    padding: 40px 0;
+}
+.testimonials h3{
+    width: 100%;
+    text-align: center;
+    height: 70px;
+    font-size: 1.6rem;
+    opacity: .6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.testimonials-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.testimonials img{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+.testimonials h4{
+    font-size: 1.1rem;
+}
+.testimonials h5{
+    opacity: .6;
+    margin: 5px auto;
+}
+.gallery img{
+    height: 300px;
+    width: 25%;
+    max-width: 500px;
+}
+footer{
+    min-height: 250px;
+    background:hsl(168, 34%, 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.socials a{
+    display: inline-block;
+    margin: 0 10px;
+}
+footer nav{
+    height: 70px;
+    flex-direction: column;
+}
+footer nav ul li{
+    color:hsl(168, 34%, 35%);
+    transition: .4s ease-in-out;
+}
+footer nav ul li:hover{
+    color: #fff;
+}
+.reverse .secondary-cta-btn:after{
+    background: hsl(51, 100%, 49%)
+}
+#menu{
+    background: none;
+    font-size: 0;
+    border:none;
+    display: none;
+}
+
+@media (max-width:800px){
+    section{
+        flex-direction: column;
+    }
+    .tab{
+        width: 100%;
+    }
+    .gallery{
+        align-items: center;
+    }
+    .gallery img{
+        width: 100%;
+    }
+    .testimonials-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .reverse{
+        flex-direction: column-reverse;
+    }
+
+    header nav ul{
+        height: 200px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+        position: absolute;
+        top:-100vh;
+        left:50%;
+        transform: translateX(-50%);
+        transition: .4s ease-in-out;
+        opacity: 0;
+    }
+    header ul li{
+        display: block;
+        color: gray;
+        height: 35px;
+        font-size: 1.6rem;
+    }
+    header .cta-btn{
+        background: hsl(51, 100%, 49%);
+    }
+    #menu{
+        display: flex;
+    }
+    .active {
+        display: block;
+        top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+    }
+}
